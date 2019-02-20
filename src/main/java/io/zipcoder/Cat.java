@@ -6,7 +6,7 @@ public class Cat extends Pet {
     }
 
     public Cat() {
-        super("Cat name");
+        super("");
     }
 
     public String speak() {

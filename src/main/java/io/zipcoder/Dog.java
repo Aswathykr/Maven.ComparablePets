@@ -8,7 +8,7 @@ public class Dog extends Pet {
     }
 
     public Dog() {
-        super("Dog name");
+        super("");
     }
 
     public String speak() {

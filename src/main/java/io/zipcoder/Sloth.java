@@ -6,7 +6,7 @@ public class Sloth extends Pet{
     }
 
     public Sloth() {
-        super("Sloth name");
+        super("");
     }
 
     public String speak() {

@@ -1,9 +1,9 @@
 package io.zipcoder;
 
-import io.zipcoder.Pets.Cat;
-import io.zipcoder.Pets.Dog;
-import io.zipcoder.Pets.Pet;
-import io.zipcoder.Pets.Sloth;
+import io.zipcoder.Cat;
+import io.zipcoder.Dog;
+import io.zipcoder.Pet;
+import io.zipcoder.Sloth;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -92,8 +92,8 @@ public class PetTests {
         Assert.assertTrue(actual4 < 0);
         Assert.assertTrue(actual5 > 0);
         Assert.assertTrue(actual6 == 0);
-        Assert.assertTrue(actual7 > 0);
-        Assert.assertTrue(actual8 < 0);
+        Assert.assertTrue(actual7 == 0);
+        Assert.assertTrue(actual8 == 0);
     }
 
     @Test
@@ -106,7 +106,7 @@ public class PetTests {
         Pet p5 = new Cat("Slothyboo");
         Pet p6 = new Dog("Gilligan");
         Pet[] petArray = new Pet[] {p1, p2, p3, p4, p5, p6};
-        Pet[] expected = new Pet[] {p1, p6, p3, p2, p5, p4};
+        Pet[] expected = new Pet[] {p1, p6, p3, p2, p4, p5};;
 
         // When
         Arrays.sort(petArray);
@@ -131,7 +131,7 @@ public class PetTests {
         petList.add(p4);
         petList.add(p5);
         petList.add(p6);
-        Pet[] expected = new Pet[]{p1, p6, p3, p2, p5, p4};
+        Pet[] expected = new Pet[]{p1, p6, p3, p2, p4, p5};
 
         // When
         Collections.sort(petList);
@@ -157,7 +157,7 @@ public class PetTests {
         Pet p6 = new Dog("Gilligan");
         Pet p7 = new Sloth("Slothmaster");
         Pet[] petArray = new Pet[] {p1, p2, p3, p4, p5, p6, p7};
-        Pet[] expected = new Pet[] {p1, p5, p6, p3, p2, p7, p4};
+        Pet[] expected = new Pet[] {p1, p6, p3, p2, p7, p4, p5};
 
         // When
         Arrays.sort(petArray, petComparator);
